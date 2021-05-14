@@ -46,7 +46,7 @@
             android:background="@drawable/edittext_design_1"
             android:layout_marginHorizontal="28dp"
             android:layout_marginTop="14dp"
-            android:hint=" 닉네임 입력"
+            android:hint=" 비밀번호 입력"
             android:fontFamily="@font/seoulnamsancb"
             android:textColorHint="@color/black"
             android:textSize="15dp"
