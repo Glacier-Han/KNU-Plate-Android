@@ -12,9 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnuPlate"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetailActivity"></activity>
-        <!-- usesCleartextTraffic : http 접근 허용 -->
-        <activity android:name=".Ex1Activity" />
+        <activity android:name=".PostLocaActivity"></activity>
+        <activity android:name=".DetailActivity" /> <!-- usesCleartextTraffic : http 접근 허용 -->
         <activity android:name=".UnivcertActivity" />
         <activity android:name=".SigninActivity" />
         <activity android:name=".SignupActivity" />
@@ -25,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

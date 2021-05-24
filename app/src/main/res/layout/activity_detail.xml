@@ -18,12 +18,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="크슐랭가이드"
+                android:text="반미리코"
                 android:fontFamily="@font/seoulnamsancb"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="@color/title_color"
+                android:textColor="@color/black"
                 />
 
         </androidx.appcompat.widget.Toolbar>

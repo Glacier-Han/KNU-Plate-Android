@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello\nHere is Location"
+        android:text="Hello\n지도 API 들어갈 곳"
         android:gravity="center"/>
 
 </FrameLayout>

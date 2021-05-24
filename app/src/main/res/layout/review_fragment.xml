@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello\nHere is Review"
+        android:text="detail_item.xml 리사이클러뷰 연동"
         android:gravity="center"/>
 
 </FrameLayout>

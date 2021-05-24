@@ -118,21 +118,20 @@
             android:padding="10dp"
             />
 
+
         <EditText
             android:id="@+id/signup_edit5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_design_1"
             android:layout_marginHorizontal="28dp"
             android:layout_marginTop="14dp"
-            android:hint="학교 이메일 입력"
+            android:background="@drawable/edittext_design_1"
             android:fontFamily="@font/seoulnamsancb"
+            android:hint="학교 이메일 입력"
+            android:padding="10dp"
             android:textColorHint="@color/black"
             android:textSize="15dp"
-            android:textStyle="bold"
-            android:padding="10dp"
-            />
-
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/signup_button"
