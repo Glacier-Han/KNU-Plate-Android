@@ -3,6 +3,7 @@ package com.example.knuplate;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.tabs.TabLayout;
+
 import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
@@ -23,6 +26,7 @@ public class DetailActivity extends AppCompatActivity {
     Button button;
     RecyclerView recyclerView;
     int CODE_ALBUM_REQUEST = 111;
+    Fragment review_fragment, menu_fragment, location_fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +36,7 @@ public class DetailActivity extends AppCompatActivity {
         recyclerView= findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-
-
-
-        //버튼 클릭했을 때 갤러리 연다
+        //리사이클러뷰 사진선택 code
         button.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
             @Override
@@ -46,6 +47,44 @@ public class DetailActivity extends AppCompatActivity {
                 startActivityForResult(intent, CODE_ALBUM_REQUEST);
             }
         });
+
+        //TabLayout-FragmentLayout
+        review_fragment = new Fragment_Review();
+        menu_fragment = new Fragment_Menu();
+        location_fragment = new Fragment_Location();
+        getSupportFragmentManager().beginTransaction().add(R.id.frame, review_fragment).commit();
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                                          @Override
+                                          public void onTabSelected(TabLayout.Tab tab) {
+
+                                              int position = tab.getPosition();
+
+                                              Fragment selected = null;
+
+                                              if(position == 0){
+                                                  selected = review_fragment;
+                                              }
+                                              else if (position == 1){
+                                                  selected = location_fragment;
+                                              }
+                                              else if (position == 2){
+                                                  selected = menu_fragment;
+                                              }
+
+                                              getSupportFragmentManager().beginTransaction().replace(R.id.frame, selected).commit();
+                                          }
+
+                                          @Override
+                                          public void onTabUnselected(TabLayout.Tab tab) {
+
+                                          }
+
+                                          @Override
+                                          public void onTabReselected(TabLayout.Tab tab) {
+
+                                          }
+                                      });
     }
 
         //앨범 이미지 가져오기
