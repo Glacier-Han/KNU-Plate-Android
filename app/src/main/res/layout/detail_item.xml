@@ -57,6 +57,7 @@
 
             <!-- 별점 아이콘은 서버에서 받아온 값에 따라 java 단에서 처리 -->
             <ImageView
+                android:id="@+id/rate_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
