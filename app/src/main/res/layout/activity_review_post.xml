@@ -28,6 +28,177 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_divider"/>
+
+        <!-- _______________________________ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/review_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_rating"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/review_star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_rating"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/review_star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_rating"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/review_star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_rating"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/review_star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_rating"
+                android:layout_marginRight="60dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/image_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="음식 사진"
+                android:fontFamily="@font/seoulnamsancb"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/review_picadd_but"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/add_button"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/add_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/menubook_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="내가 주문한 메뉴"
+                    android:fontFamily="@font/seoulnamsancb"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Spinner
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추가"
+                    android:layout_marginHorizontal="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/review_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="리뷰"
+                    android:fontFamily="@font/seoulnamsancb"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:hint="드셨던 음식에 대한 솔직한 리뷰를 적어주세요.\n악플성 글, 또는 리뷰와 관련이 없음이 의심 또는 판단되는 글은 예고없이 삭제될 수 있습니다."
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext_design_2"
+                android:layout_margin="15dp"/>
+
+        </LinearLayout>
+
+
+
         
     </LinearLayout>
 

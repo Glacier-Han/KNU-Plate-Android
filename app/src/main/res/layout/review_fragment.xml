@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".Fragment_Review">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="detail_item.xml 리사이클러뷰 연동"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp" />
 
 </FrameLayout>
