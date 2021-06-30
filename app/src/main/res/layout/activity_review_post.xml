@@ -45,32 +45,32 @@
                 android:id="@+id/review_star1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star_rating"
+                android:src="@drawable/star_selector"
                 android:layout_marginLeft="60dp"
                 android:layout_weight="1"/>
             <ImageView
                 android:id="@+id/review_star2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star_rating"
+                android:src="@drawable/star_selector"
                 android:layout_weight="1"/>
             <ImageView
                 android:id="@+id/review_star3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star_rating"
+                android:src="@drawable/star_selector"
                 android:layout_weight="1"/>
             <ImageView
                 android:id="@+id/review_star4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star_rating"
+                android:src="@drawable/star_selector"
                 android:layout_weight="1"/>
             <ImageView
                 android:id="@+id/review_star5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star_rating"
+                android:src="@drawable/star_selector"
                 android:layout_marginRight="60dp"
                 android:layout_weight="1"/>
 
@@ -151,11 +151,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <Spinner
+                    android:id="@+id/menu_spinner"
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="15dp"/>
 
                 <Button
+                    android:id="@+id/menu_add_but"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="추가"
@@ -187,6 +189,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/review_et"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:hint="드셨던 음식에 대한 솔직한 리뷰를 적어주세요.\n악플성 글, 또는 리뷰와 관련이 없음이 의심 또는 판단되는 글은 예고없이 삭제될 수 있습니다."

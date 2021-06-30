@@ -11,19 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KnuPlate"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".ReviewPostActivity"></activity>
+        android:usesCleartextTraffic="true"> <!-- usesCleartextTraffic : http 접근 허용 -->
+
+        <activity android:name=".ReviewPostActivity">
+
+        </activity>
         <activity android:name=".PostLocaActivity" />
-        <activity android:name=".DetailActivity" /> <!-- usesCleartextTraffic : http 접근 허용 -->
-        <activity android:name=".UnivcertActivity" />
-        <activity android:name=".SigninActivity" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".TitleActivity">
+        <activity android:name=".DetailActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".UnivcertActivity" />
+        <activity android:name=".SigninActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".TitleActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>

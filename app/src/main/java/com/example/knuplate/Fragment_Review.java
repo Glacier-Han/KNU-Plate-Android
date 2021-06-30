@@ -1,7 +1,5 @@
 package com.example.knuplate;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 public class Fragment_Review extends Fragment {
 
     public static Fragment_Review newInstance() {
@@ -23,13 +23,29 @@ public class Fragment_Review extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
+
         View v = inflater.inflate(R.layout.review_fragment, container, false);
 
         RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new RecyclerAdapter());
+        //test
+        ArrayList<ReviewData> arrayList = new ArrayList<>();
+        ReviewAdapter reviewAdapter = new ReviewAdapter(arrayList);
+        recyclerView.setAdapter(reviewAdapter);
+        recyclerView.setAdapter(reviewAdapter);
+
+        ReviewData testdata = new ReviewData(R.drawable.profile_icon_default, "test", R.drawable.testpicture, R.drawable.star_rating_unfilled, "test");
+        arrayList.add(testdata);
+        arrayList.add(testdata);
+        arrayList.add(testdata);
+        arrayList.add(testdata);
+        arrayList.add(testdata);
+
 
         return v;
     }
+
+
 
 }
