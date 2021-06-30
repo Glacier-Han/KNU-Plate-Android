@@ -16,6 +16,7 @@
         android:elevation="5dp">
 
         <TextView
+            android:id="@+id/menu_item_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Default Menu"
@@ -24,6 +25,7 @@
             android:layout_margin="2dp"/>
 
         <ProgressBar
+            android:id="@+id/menu_item_pb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:progress="70"

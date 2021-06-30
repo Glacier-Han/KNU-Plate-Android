@@ -33,19 +33,17 @@ public class Fragment_Review extends Fragment {
         ArrayList<ReviewData> arrayList = new ArrayList<>();
         ReviewAdapter reviewAdapter = new ReviewAdapter(arrayList);
         recyclerView.setAdapter(reviewAdapter);
-        recyclerView.setAdapter(reviewAdapter);
 
-        ReviewData testdata = new ReviewData(R.drawable.profile_icon_default, "test", R.drawable.testpicture, R.drawable.star_rating_unfilled, "test");
+        ReviewData testdata = new ReviewData(R.drawable.profile_icon_default, "testdata1", R.drawable.testpicture, R.drawable.star_rating_unfilled, "test1");
+        ReviewData testdata2 = new ReviewData(R.drawable.location_icon, "testdata2", R.drawable.testpicture, R.drawable.star_rating, "test2");
+        ReviewData testdata3 = new ReviewData(R.drawable.star_rating_unfilled, "testdata3", R.drawable.testpicture, R.drawable.star_rating, "test3");
         arrayList.add(testdata);
+        arrayList.add(testdata2);
+        arrayList.add(testdata3);
         arrayList.add(testdata);
-        arrayList.add(testdata);
-        arrayList.add(testdata);
-        arrayList.add(testdata);
+        arrayList.add(testdata2);
 
 
         return v;
     }
-
-
-
 }

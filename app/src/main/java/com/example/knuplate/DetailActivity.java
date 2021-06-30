@@ -16,6 +16,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
@@ -31,14 +32,19 @@ public class DetailActivity extends AppCompatActivity {
     ArrayList<Uri> uriList = new ArrayList<>();
     UriImageAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        ImageView likebut_detail = findViewById(R.id.likebut_detail);
+        ImageView ratebut_detail = findViewById(R.id.ratebut_detail);
+
         button= findViewById(R.id.button);
         recyclerView= findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
         //리사이클러뷰 사진선택 code
         button.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
@@ -50,6 +56,25 @@ public class DetailActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 startActivityForResult(intent, CODE_ALBUM_REQUEST);
 
+            }
+        });
+
+        //하트, 별 클릭리스너
+        likebut_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likebut_detail != null) {
+                    likebut_detail.setSelected(!likebut_detail.isSelected());
+                }
+            }
+        });
+
+        ratebut_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ratebut_detail != null) {
+                    ratebut_detail.setSelected(!ratebut_detail.isSelected());
+                }
             }
         });
 
